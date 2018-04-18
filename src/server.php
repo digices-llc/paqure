@@ -10,6 +10,10 @@
 
 namespace digices\paqure;
 
+/**
+$server = \digices\paqure\Server::shared();
+**/
+
 class Server
 {
 
