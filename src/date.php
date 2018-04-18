@@ -54,7 +54,6 @@ class Date
     */
   public function initWithPosix($int)
   {
-    global $digice_replyr_config;
     $this->posix = intval($int);
     $tz = new \DateTimeZone('America/Denver');
     $dt = date_create_from_format('U', strval($this->posix), $tz);
@@ -72,7 +71,6 @@ class Date
     */
   public function initWithMySQL($str)
   {
-    global $digice_replyr_config;
     $this->mysql = $str;
     $tz = new \DateTimeZone('America/Denver');
     $dt = date_create_from_format('Y-m-d H:i:s', $this->mysql, $tz);
