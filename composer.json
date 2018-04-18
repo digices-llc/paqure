@@ -1,0 +1,22 @@
+{
+    "name": "digices/paqure",
+    "description": "Object-Oriented Parse-Query-Reply Library for PHP",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "parse"
+    ],
+    "authors": [
+        {
+            "name": "Roderic Linguri",
+            "email": "linguri@digices.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "digices\\paqure\\": "src"
+        }
+    }
+}
