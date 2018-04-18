@@ -55,7 +55,7 @@ class Date
   public function initWithPosix($int)
   {
     $this->posix = intval($int);
-    $tz = new \DateTimeZone('America/Denver');
+    $tz = new \DateTimeZone(date_default_timezone_get());
     $dt = date_create_from_format('U', strval($this->posix), $tz);
     $dt->setTimezone($tz);
     $this->mysql = $dt->format('Y-m-d H:i:s');
@@ -72,7 +72,7 @@ class Date
   public function initWithMySQL($str)
   {
     $this->mysql = $str;
-    $tz = new \DateTimeZone('America/Denver');
+    $tz = new \DateTimeZone(date_default_timezone_get());
     $dt = date_create_from_format('Y-m-d H:i:s', $this->mysql, $tz);
     $dt->setTimezone($tz);
     $this->posix = intval(date_format($dt, 'U'));
