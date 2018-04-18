@@ -11,8 +11,8 @@
 namespace digices\paqure;
 
 /**
-$date = new \digices\paqure\Date(1435342671);
-$date = new \digices\paqure\Date('2018-04-17 19:00:00');
+* $date = new \digices\paqure\Date(1435342671);
+* $date = new \digices\paqure\Date('2018-04-17 19:00:00');
 **/
 
 class Date
