@@ -77,7 +77,6 @@ class Date
     $dt->setTimezone($tz);
     $this->posix = intval(date_format($dt, 'U'));
     $this->offset = $tz->getOffset($dt);
-    
     $tz = new \DateTimeZone('UTC');
     $dt->setTimezone($tz);
     $this->iso8601 = $dt->format(\DateTime::ATOM);
