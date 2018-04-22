@@ -11,7 +11,7 @@
 namespace digices\paqure;
 
 /**
-$reply = new \digices\paqure\Reply('events','fetch-all','GET','XD4r5tY7');
+* $reply = new \digices\paqure\Reply('events','fetch-all','GET','XD4r5tY7');
 **/
 
 class Reply
