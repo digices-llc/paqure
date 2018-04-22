@@ -2,7 +2,7 @@
 
 /**
  * @package   PaQuRe
- * @version   0.6.0
+ * @version   0.6.1
  * @author    Roderic Linguri
  * @copyright 2012-2018 Digices LLC
  * @license   MIT
@@ -38,6 +38,15 @@ class Reply
   {
     array_push($this->data, $object);
   } // ./appendData
+
+    /**
+    * @method  set message
+    * @param   string
+    */
+  public function setMessage($string)
+  {
+    $this->meta->setMessage($string);
+  } // ./set message
 
   /**
     * @method  output
