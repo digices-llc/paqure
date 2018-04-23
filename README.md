@@ -19,7 +19,7 @@ _Include the following in the root level of your composer.json:_
         }
     ],
     "require": {
-        "digices/paqure": "dev-master"
+        "digices/paqure": ">=0.6.1"
     }
 }
 
