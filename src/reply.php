@@ -2,7 +2,7 @@
 
 /**
  * @package   PaQuRe
- * @version   0.6.1
+ * @version   0.6.4
  * @author    Roderic Linguri
  * @copyright 2012-2018 Digices LLC
  * @license   MIT
@@ -39,7 +39,25 @@ class Reply
     array_push($this->data, $object);
   } // ./appendData
 
-    /**
+  /**
+    * @method  set data
+    * @param   object
+    */
+  public function setData($data)
+  {
+    $this->data = $data;
+  } // ./setData
+
+  /**
+    * @method  get data
+    * @return array
+    */
+  public function getData()
+  {
+    return $this->data;
+  } // ./getData
+
+  /**
     * @method  set message
     * @param   string
     */
@@ -54,6 +72,7 @@ class Reply
     */
   public function output()
   {
+    $this->meta->setCount(count($this->data));
     return array('meta' => $this->meta->output(),'data' => $this->data);
   } // ./output
 

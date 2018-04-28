@@ -2,7 +2,7 @@
 
 /**
  * @package   PaQuRe
- * @version   0.6.0
+ * @version   0.6.4
  * @author    Roderic Linguri
  * @copyright 2012-2018 Digices LLC
  * @license   MIT
@@ -29,6 +29,12 @@ class Meta
   /** @property string **/
   protected $state;
 
+  /** @property integer **/
+  protected $count;
+
+  /** @property string **/
+  protected $message;
+
   /** @property Timer **/
   protected $timer;
   
@@ -52,6 +58,11 @@ class Meta
     $this->message = $string;
   } // ./set message
 
+  public function setCount($int)
+  {
+    $this->count = $int;
+  }
+
   /**
     * @method  set message
     * @return  assoc
@@ -63,6 +74,7 @@ class Meta
       'action'  => $this->action,
       'method'  => $this->method,
       'state'   => $this->state,
+      'count'   => $this->count,
       'message' => $this->message,
       'timer'   => $this->timer->executionTime()
     );
