@@ -2,7 +2,7 @@
 
 /**
  * @package   PaQuRe
- * @version   0.6.4
+ * @version   0.6.5
  * @author    Roderic Linguri
  * @copyright 2012-2018 Digices LLC
  * @license   MIT
@@ -11,7 +11,7 @@
 namespace digices\paqure;
 
 /**
-$meta = new \digices\paqure\Reply('events','fetch-all','GET','XD4r5tY7');
+* $meta = new \digices\paqure\Reply('events', 0,'GET','XD4r5tY7');
 **/
 
 class Meta
@@ -21,7 +21,7 @@ class Meta
   protected $model;
   
   /** @property string **/
-  protected $action;
+  protected $param;
   
   /** @property string **/
   protected $method;
@@ -44,7 +44,7 @@ class Meta
     $this->timer = new \digices\paqure\Timer();
     $this->message = 'No Data';
     $this->model = $model;
-    $this->action = $action;
+    $this->param = $param;
     $this->method = $method;
     $this->state = $state;
   } // ./__construct
@@ -58,10 +58,14 @@ class Meta
     $this->message = $string;
   } // ./set message
 
+  /**
+    * @method  set count
+    * @param   integer
+    */
   public function setCount($int)
   {
     $this->count = $int;
-  }
+  } // ./setCount
 
   /**
     * @method  set message
@@ -71,7 +75,7 @@ class Meta
   {
     return array(
       'model'   => $this->model,
-      'action'  => $this->action,
+      'param'   => $this->param,
       'method'  => $this->method,
       'state'   => $this->state,
       'count'   => $this->count,
